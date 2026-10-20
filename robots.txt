@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sarasen33pl-bit.github.io/WiseMemoryOptimizer_Native/sitemap.xml
