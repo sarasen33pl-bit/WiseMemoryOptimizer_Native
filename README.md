@@ -25,7 +25,7 @@
   <img src="https://img.shields.io/github/stars/sarasen33pl-bit/WiseMemoryOptimizer_Native?style=social" alt="GitHub Stars">
 </p>
 
-A high-fidelity, ultra-optimized native C++20 clone of **Wise Memory Optimizer**. Built from the ground up with 100% native Win32 and GDI+, featuring zero external runtime dependencies, 60 FPS liquid wave graphics, immersive DWM dark mode, authentic dual-language support (English & Arabic), and kernel NT memory optimization APIs.
+A high-fidelity, ultra-optimized native C++20 clone of **Wise Memory Optimizer** (also searched as **Wise Optimizer** or **Wise Memory**). Built from the ground up with 100% native Win32 and GDI+, featuring zero external runtime dependencies, 60 FPS liquid wave graphics, immersive DWM dark mode, authentic dual-language support (English & Arabic), and kernel NT memory optimization APIs.
 
 ---
 
