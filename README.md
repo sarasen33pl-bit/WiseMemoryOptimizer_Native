@@ -1,5 +1,8 @@
 # Wise Memory Optimizer Native (C++20 AAA 60FPS Edition)
 
+[![Direct Download](https://img.shields.io/badge/Download-WiseMemoryOptimizer__Native.exe%20(300KB)-brightgreen?logo=windows&style=for-the-badge)](https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/releases/download/v1.0.0/WiseMemoryOptimizer_Native.exe)
+[![Latest Release](https://img.shields.io/github/v/release/sarasen33pl-bit/WiseMemoryOptimizer_Native?style=for-the-badge&color=blue)](https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/releases/latest)
+
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6.svg?logo=windows)](https://microsoft.com/windows)
 [![Language](https://img.shields.io/badge/Language-C%2B%2B20-blue.svg?logo=c%2B%2B)](https://en.wikipedia.org/wiki/C%2B%2B20)
 [![Framework](https://img.shields.io/badge/Framework-Pure%20Win32%20%2F%20GDI%2B-green.svg)](https://docs.microsoft.com/en-us/windows/win32/)
