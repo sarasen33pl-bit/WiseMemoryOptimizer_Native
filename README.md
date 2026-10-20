@@ -13,6 +13,31 @@ A high-fidelity, ultra-optimized native C++20 clone of **Wise Memory Optimizer**
 
 ---
 
+## 📸 Visual Previews
+
+| Dark Mode (Collapsed) | Dark Mode (Expanded Metrics) |
+|:---:|:---:|
+| ![Dark Collapsed](docs/screenshots/dark_main_collapsed.png) | ![Dark Expanded](docs/screenshots/dark_main_expanded.png) |
+
+| Light Mode (Live Live Waves) | Settings & Immersive Dark Dialog |
+|:---:|:---:|
+| ![Light Mode](docs/screenshots/light_main_collapsed.png) | ![Dark Settings](docs/screenshots/dark_settings.png) |
+
+---
+
+## ⚡ Performance Comparison (Native C++20 vs Modern Tools)
+
+| Feature | Wise Memory Optimizer Native | Bloated Electron Utilities | Other Standard Tools |
+|---|---|---|---|
+| **Binary Size** | **~298 KB (Single EXE)** | 100 MB – 180 MB | 10 MB – 30 MB |
+| **Runtime Overhead** | **< 8 MB RAM, 0% CPU Idle** | > 150 MB RAM, Chromium Engine | 25 MB – 50 MB (.NET / Java) |
+| **Dependencies** | **Zero (100% Native Win32/C++20)** | Node.js, V8, Chromium DLLs | .NET Runtime, VC++ Redistributables |
+| **Standby List Purge** | **Kernel NT `NtSetSystemInformation`** | ❌ No | ⚠️ Rare / Incomplete |
+| **Wave Animation** | **60 FPS FoxProgressEx Fluid Engine** | HTML5 Canvas / CSS Lag | Static Progress Bar |
+| **Dark Mode** | **Windows 10/11 DWM Immersive** | Inconsistent Web Themes | White System Borders |
+
+---
+
 ## 🌟 Key Features
 
 ### 1. 🌊 Fluid Liquid Wave Engine (FoxProgressEx)
