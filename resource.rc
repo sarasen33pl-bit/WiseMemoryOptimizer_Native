@@ -1,0 +1,32 @@
+1 ICON "assets\\app.ico"
+101 RCDATA "assets\\icon_1.png"
+102 RCDATA "assets\\about_logo.png"
+
+1 VERSIONINFO
+FILEVERSION 4,2,4,132
+PRODUCTVERSION 4,2,4,132
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0x0L
+FILEOS 0x40004L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "WiseCleaner.com"
+            VALUE "FileDescription", "Wise Memory Optimizer Native"
+            VALUE "FileVersion", "4.2.4.132"
+            VALUE "InternalName", "WiseMemoryOptimizer"
+            VALUE "LegalCopyright", "Copyright (C) 2026 WiseCleaner.com"
+            VALUE "OriginalFilename", "WiseMemoryOptimzer.exe"
+            VALUE "ProductName", "Wise Memory Optimizer"
+            VALUE "ProductVersion", "4.2.4.132"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

@@ -1,0 +1,27 @@
+# Visual Studio & C++ Build Artifacts
+*.obj
+*.res
+*.exe
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.manifest
+*.log
+.vs/
+x64/
+x86/
+Debug/
+Release/
+
+# Temporary and local user configs
+config.ini
+debug.log
+feedback.log
+notice.log
+settings.log
+
+# Temporary test files
+test_*
+check_*
+inspect_*
