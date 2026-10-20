@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wise Memory Optimizer Native | 300KB C++20 60FPS RAM Cleaner</title>
+  <meta name="description" content="Ultra-optimized, standalone native C++20 clone of Wise Memory Optimizer. 60 FPS fluid wave animation, kernel NT standby list purging, immersive dark mode.">
+  <meta property="og:title" content="Wise Memory Optimizer Native (C++20 AAA Edition)">
+  <meta property="og:description" content="300KB portable Win32 RAM cleaner with 60 FPS liquid waves and kernel memory purging. Zero dependencies.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/app.ico">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: rgba(22, 27, 34, 0.85);
+      --border: #30363d;
+      --accent: #22c55e;
+      --accent-hover: #16a34a;
+      --text: #f0f6fc;
+      --text-muted: #8b949e;
+      --orange: #f59e0b;
+      --blue: #3b82f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    
+    /* Header */
+    header {
+      padding: 30px 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+    .logo img { width: 32px; height: 32px; border-radius: 6px; }
+    .header-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .header-links a:hover { color: #fff; }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      background: linear-gradient(180deg, #fff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      font-size: 20px;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 40px;
+    }
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+    .btn {
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.4);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-2px);
+    }
+
+    /* Live Interactive Canvas Demo */
+    .demo-wrapper {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 80px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    }
+    canvas {
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 25px rgba(34, 197, 94, 0.2);
+    }
+    .demo-info {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .demo-btn {
+      width: 100%;
+      padding: 12px;
+      background: #22c55e;
+      color: #000;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: opacity 0.2s;
+    }
+    .demo-btn:hover { opacity: 0.9; }
+
+    /* Highlights Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 28px;
+      border-radius: 12px;
+      text-align: left;
+    }
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .card p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+    }
+
+    /* Comparison Table */
+    .table-section {
+      margin-bottom: 80px;
+      text-align: center;
+    }
+    .table-section h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    .table-container {
+      overflow-x: auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14.5px;
+    }
+    th, td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    th {
+      background: rgba(255,255,255,0.03);
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    tr:last-child td { border-bottom: none; }
+    .highlight-td {
+      color: #4ade80;
+      font-weight: 700;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <a href="#" class="logo">
+        <img src="assets/ram_icon.png" alt="RAM Icon">
+        Wise Memory Optimizer Native
+      </a>
+      <div class="header-links">
+        <a href="https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native" target="_blank">GitHub</a>
+        <a href="https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/releases" target="_blank">Releases</a>
+        <a href="#benchmark">Benchmark</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="badge">🚀 v1.0.0 Stable Native Release</div>
+      <h1>Ultra-Lightweight C++20<br>RAM Optimizer for Windows</h1>
+      <p class="subtitle">
+        A 300KB single portable binary with 60 FPS real-time fluid wave physics, kernel NT Standby List purging, and true Windows 11 DWM dark mode. Zero dependencies.
+      </p>
+
+      <div class="cta-group">
+        <a href="https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/releases/download/v1.0.0/WiseMemoryOptimizer_Native.exe" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Free (300 KB)
+        </a>
+        <a href="https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native" target="_blank" class="btn btn-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+
+      <!-- Live Interactive Browser Canvas Demo -->
+      <div class="demo-wrapper">
+        <canvas id="waveCanvas" width="180" height="180"></canvas>
+        <div class="demo-info">Live In-Browser Fluid Simulation (FoxProgressEx)</div>
+        <button class="demo-btn" id="optBtn" onclick="runSim()">Optimize Now</button>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🌊</div>
+        <h3>60 FPS Liquid Wave Engine</h3>
+        <p>Built with double-buffered GDI+ mathematical wave physics. Smooth sine/cosine trigonometric fluid levels that respond to RAM usage.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Kernel NT API Purging</h3>
+        <p>Directly calls undocumented <code>NtSetSystemInformation</code> (Class 80) to purge the Windows Standby Cache and trim process working sets.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌙</div>
+        <h3>Immersive DWM Dark Mode</h3>
+        <p>True Windows 10 & 11 immersive dark mode titlebars across all windows, with high-contrast accessibility-compliant palettes.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>Dual-Language (EN & AR)</h3>
+        <p>Authentic Arabic translation with localized <code>ص</code> / <code>م</code> timing and dynamic instant switching without app restarts.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Horizontal Accordion Panel</h3>
+        <p>Smoothly expands from 346px to 800px to display detailed breakdowns of Hardware Reserved, Modified, Standby, and Free RAM.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⏱️</div>
+        <h3>Intelligent Auto-Optimization</h3>
+        <p>Runs on flexible intervals (5m to 120m) or triggers when free memory drops below your threshold with CPU idle detection.</p>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <section class="table-section" id="benchmark">
+      <h2>Native Performance vs Modern Utilities</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Wise Memory Optimizer Native</th>
+              <th>Electron / Web Cleaners</th>
+              <th>Standard .NET Tools</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Executable Size</td>
+              <td class="highlight-td">~298 KB (Single Binary)</td>
+              <td>100 MB – 180 MB</td>
+              <td>10 MB – 30 MB</td>
+            </tr>
+            <tr>
+              <td>Runtime RAM Usage</td>
+              <td class="highlight-td">&lt; 8 MB</td>
+              <td>150 MB – 250 MB</td>
+              <td>35 MB – 60 MB</td>
+            </tr>
+            <tr>
+              <td>Dependencies</td>
+              <td class="highlight-td">Zero (100% Native Win32)</td>
+              <td>Chromium, Node.js, V8</td>
+              <td>.NET Runtime, VC++ Runtimes</td>
+            </tr>
+            <tr>
+              <td>Standby List Purge</td>
+              <td class="highlight-td">✔ Kernel NT API (SystemMemoryListInformation)</td>
+              <td>❌ No</td>
+              <td>⚠️ Rare / Partial</td>
+            </tr>
+            <tr>
+              <td>UI Render Rate</td>
+              <td class="highlight-td">60 FPS Fluid GDI+</td>
+              <td>HTML5 Canvas Lag</td>
+              <td>Static Bar</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <p>Wise Memory Optimizer Native is an open-source project released under the <a href="https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/blob/main/LICENSE" target="_blank">MIT License</a>.</p>
+      <p style="margin-top: 8px;">Wise Memory Optimizer is a trademark of WiseCleaner.com.</p>
+    </footer>
+  </div>
+
+  <!-- Interactive Fluid Wave Canvas Script -->
+  <script>
+    const canvas = document.getElementById('waveCanvas');
+    const ctx = canvas.getContext('2d');
+    const d = 180;
+    let phase = 0;
+    let percent = 35;
+    let targetPercent = 35;
+    let isOptimizing = false;
+
+    function draw() {
+      ctx.clearRect(0, 0, d, d);
+
+      // Circle clip
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(d/2, d/2, d/2, 0, Math.PI * 2);
+      ctx.clip();
+
+      // Green background (#45BA1F)
+      ctx.fillStyle = '#45BA1F';
+      ctx.fillRect(0, 0, d, d);
+
+      // Water baseline
+      let speed = isOptimizing ? 0.22 : 0.05;
+      phase += speed;
+      percent += (targetPercent - percent) * 0.05;
+
+      let waterH = d * (percent / 100);
+      let baseline = d - waterH;
+      let amp1 = isOptimizing ? 6 : 2;
+      let amp2 = isOptimizing ? 3.5 : 1.2;
+
+      // Orange wave (#F39C12)
+      ctx.fillStyle = '#F39C12';
+      ctx.beginPath();
+      ctx.moveTo(-10, d + 10);
+      for (let x = -10; x <= d + 10; x += 4) {
+        let y = baseline + amp1 * Math.sin(0.045 * x + phase) + amp2 * Math.cos(0.035 * x + phase * 1.35);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(d + 10, d + 10);
+      ctx.closePath();
+      ctx.fill();
+
+      // Center Percentage Text
+      ctx.restore();
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 36px Tahoma, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(Math.round(percent) + '%', d/2, d/2);
+
+      requestAnimationFrame(draw);
+    }
+    draw();
+
+    function runSim() {
+      if (isOptimizing) return;
+      isOptimizing = true;
+      document.getElementById('optBtn').innerText = 'Optimizing...';
+      document.getElementById('optBtn').style.opacity = '0.7';
+
+      setTimeout(() => {
+        targetPercent = 14;
+        setTimeout(() => {
+          isOptimizing = false;
+          document.getElementById('optBtn').innerText = 'Freed 2.54 GB!';
+          document.getElementById('optBtn').style.opacity = '1';
+          setTimeout(() => {
+            targetPercent = 35;
+            document.getElementById('optBtn').innerText = 'Optimize Now';
+          }, 3500);
+        }, 1200);
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

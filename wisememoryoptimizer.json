@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "High-fidelity native C++20 clone of Wise Memory Optimizer with 60FPS fluid wave animations and kernel memory purging.",
+  "homepage": "https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native",
+  "license": "MIT",
+  "url": "https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/releases/download/v1.0.0/WiseMemoryOptimizer_Native.exe",
+  "bin": "WiseMemoryOptimizer_Native.exe",
+  "shortcuts": [
+    [
+      "WiseMemoryOptimizer_Native.exe",
+      "Wise Memory Optimizer Native"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "url": "https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/releases/download/v$version/WiseMemoryOptimizer_Native.exe"
+  }
+}
