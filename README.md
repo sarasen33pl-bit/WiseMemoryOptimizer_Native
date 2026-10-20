@@ -1,13 +1,29 @@
+<p align="center">
+  <img src="docs/social_banner.png" alt="Wise Memory Optimizer Native Banner" width="100%">
+</p>
+
 # Wise Memory Optimizer Native (C++20 AAA 60FPS Edition)
 
-[![Direct Download](https://img.shields.io/badge/Download-WiseMemoryOptimizer__Native.exe%20(300KB)-brightgreen?logo=windows&style=for-the-badge)](https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/releases/download/v1.0.0/WiseMemoryOptimizer_Native.exe)
-[![Latest Release](https://img.shields.io/github/v/release/sarasen33pl-bit/WiseMemoryOptimizer_Native?style=for-the-badge&color=blue)](https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/releases/latest)
+<p align="center">
+  <a href="https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/releases/download/v1.0.0/WiseMemoryOptimizer_Native.exe">
+    <img src="https://img.shields.io/badge/Download-WiseMemoryOptimizer__Native.exe%20(300KB)-brightgreen?logo=windows&style=for-the-badge" alt="Direct Download">
+  </a>
+  <a href="https://github.com/sarasen33pl-bit/WiseMemoryOptimizer_Native/releases/latest">
+    <img src="https://img.shields.io/github/v/release/sarasen33pl-bit/WiseMemoryOptimizer_Native?style=for-the-badge&color=blue" alt="Latest Release">
+  </a>
+  <a href="https://sarasen33pl-bit.github.io/WiseMemoryOptimizer_Native/">
+    <img src="https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-orange?style=for-the-badge&logo=googlechrome" alt="Live Demo">
+  </a>
+</p>
 
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6.svg?logo=windows)](https://microsoft.com/windows)
-[![Language](https://img.shields.io/badge/Language-C%2B%2B20-blue.svg?logo=c%2B%2B)](https://en.wikipedia.org/wiki/C%2B%2B20)
-[![Framework](https://img.shields.io/badge/Framework-Pure%20Win32%20%2F%20GDI%2B-green.svg)](https://docs.microsoft.com/en-us/windows/win32/)
-[![Dark Mode](https://img.shields.io/badge/Theme-Immersive%20Dark%20%26%20Light-black.svg)]()
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6.svg?logo=windows" alt="Platform">
+  <img src="https://img.shields.io/badge/Language-C%2B%2B20-blue.svg?logo=c%2B%2B" alt="C++20">
+  <img src="https://img.shields.io/badge/Framework-Pure%20Win32%20%2F%20GDI%2B-green.svg" alt="Win32">
+  <img src="https://img.shields.io/badge/Theme-Immersive%20Dark%20%26%20Light-black.svg" alt="Dark Mode">
+  <img src="https://img.shields.io/github/license/sarasen33pl-bit/WiseMemoryOptimizer_Native" alt="License">
+  <img src="https://img.shields.io/github/stars/sarasen33pl-bit/WiseMemoryOptimizer_Native?style=social" alt="GitHub Stars">
+</p>
 
 A high-fidelity, ultra-optimized native C++20 clone of **Wise Memory Optimizer**. Built from the ground up with 100% native Win32 and GDI+, featuring zero external runtime dependencies, 60 FPS liquid wave graphics, immersive DWM dark mode, authentic dual-language support (English & Arabic), and kernel NT memory optimization APIs.
 
